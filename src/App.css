@@ -19,6 +19,10 @@ body{
 .div1 ul li {
   font-size: 1.3em;
 }
+.div1 ul li a {
+  text-decoration: none;
+  color: white;
+}
 .logo{
   width: 5%;
   margin: 3px 5px;

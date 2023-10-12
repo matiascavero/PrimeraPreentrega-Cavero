@@ -8,19 +8,19 @@ const NavBar = () => {
             <h1>Todo software</h1>
             <ul>
                 <li>
-                    Inicio                
+                    <a href="#">Inicio </a>              
                 </li>
                 <li>
-                    Nosotros
+                   <a href="#">Nosotros</a>
                 </li>
                 <li>
-                    Productos
+                    <a href="#">Productos</a>
                 </li>
                 <li>
-                    Contacto
+                    <a href="#">Contacto</a>
                 </li>
                 <li>
-                    Iniciar sesion
+                    <a href="#">Iniciar sesion</a>
                 </li>
             </ul>
             <CartWidget/>
