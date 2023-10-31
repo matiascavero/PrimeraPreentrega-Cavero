@@ -1,12 +1,17 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 body{
+  margin: 0;
   background: rgb(148,65,149);
   background: radial-gradient(circle, rgba(148,65,149,1) 0%, rgba(64,44,92,1) 44%);
   color: white;
 }
+/* NavBar */
 .div1{
   display: flex;
-  
-
 }
 .div1 ul{
   list-style: none;
@@ -23,10 +28,26 @@ body{
   text-decoration: none;
   color: white;
 }
+.LinkText{
+ display: flex;
+ align-items: center;
+}
+.LinkText span {
+  margin-right: 5px; /* Opcional: Agrega un espacio entre las palabras */
+}
+.linkContainer{
+  display: flex;
+  text-decoration: none;
+}
+.titleLogo{
+  color: white;
+  text-decoration: none;
+}
 .logo{
-  width: 5%;
+  width: 10%;
   margin: 3px 5px;
 }
+
 .greetdiv{
   text-align: center;
 }
@@ -42,4 +63,53 @@ body{
 }
 .iconCart{
   margin: 10px 6px ;
+}
+
+/* Productos */
+
+.prods{
+  display: flex;
+  flex-wrap:  wrap;
+  justify-content: space-evenly;
+}
+
+.imgsProds{
+  width: 300px;
+  margin: 4px 4px;
+}
+
+.prod{
+  display: flex;
+  flex-direction: column;
+  width: 350px; 
+  height: 400px; 
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  
+}
+ .bord{
+  border: solid 4px;
+  border-color: black;
+  margin: 10px 10px;
+} 
+
+.botonAddCard{
+  position: absolute;
+  bottom: 10px; 
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  color: black;
+  font-size: 1.1em;
+
+}
+.botn{
+  padding: 2px 2px;
+  color: black;
+  /* background: rgb(128,34,195);
+  background: linear-gradient(0deg, rgba(128,34,195,1) 18%, rgba(253,187,45,1) 100%); */
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(81,65,144,1) 100%);
 }

@@ -1,0 +1,16 @@
+.count{
+display: flex;
+}
+
+.botonMat{
+    width: 35px;
+    height: 40px;
+    background: rgb(136,72,181);
+    background: linear-gradient(0deg, rgba(136,72,181,1) 18%, rgba(61,95,171,1) 100%);
+    margin: 2px 7px;
+}
+
+.botonAdd{
+    background: rgb(136,72,181);
+    background: linear-gradient(0deg, rgba(136,72,181,1) 18%, rgba(61,95,171,1) 100%);
+}

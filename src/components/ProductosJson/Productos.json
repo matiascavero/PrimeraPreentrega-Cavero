@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "title": "Monitor LG, 60HZ, 19p ",
+      "price": 60000,
+      "category": "Monitor",
+      "img": "/monitor-lg.png",
+      "stock": "14",
+        "description": "El Monitor LG de 60Hz y 19 pulgadas ofrece una experiencia de visualización excepcional en un diseño compacto. Su pantalla de 19 pulgadas y una tasa de actualización de 60Hz proporcionan imágenes nítidas y una visualización suave. Este monitor es una elección versátil y elegante para tus necesidades diarias de computación."
+      
+    },
+    {
+        "id": 2,
+        "title": "Monitor Samsung 144HZ, 24p con un 1ms de respuesta",
+        "price": 150000,
+        "category": "Monitor",
+        "img": "/monitor-samsung.png",
+        "stock": "4",
+        "description": "Sumérgete en la acción con el Monitor Samsung de 144Hz, una pantalla de 24 pulgadas diseñada para ofrecer una experiencia de juego excepcional. Con una alta tasa de actualización de 144Hz y un rápido tiempo de respuesta de 1ms, este monitor garantiza movimientos fluidos y precisos, sin efectos de desenfoque. Experimenta colores vibrantes y una calidad de imagen nítida en una pantalla espaciosa. El Monitor Samsung de 144Hz es la elección definitiva para jugadores y entusiastas de la tecnología en busca de un rendimiento excepcional."
+    },
+    {
+        "id": 3,
+        "title": "Video Radeon RX 550 2gb, Asrock Phantom gaming GDDR5",
+        "price": 96000,
+        "category": "PlacDVideo",
+        "img": "/asrock.png",
+        "stock": "11",
+        "description": "La Tarjeta de Video Radeon RX 550 de Asrock Phantom Gaming, con 2GB de memoria GDDR5, te brinda un rendimiento gráfico excepcional en un formato compacto. Diseñada para juegos y contenido multimedia de alta calidad, esta tarjeta cuenta con una eficiente refrigeración Asrock Phantom Gaming. Disfruta de una experiencia visual excepcional y un rendimiento gráfico confiable."
+    }, 
+    {
+        "id": 4,
+        "title": "Placa de video Nvidia Asus TUF Gaming GeForce 1600",
+        "price": 160000,
+        "category": "PlacDVideo",
+        "img": "/nvidia.png",
+        "stock": "18",
+        "description": "La Placa de Video Nvidia Asus TUF Gaming GeForce 1600 es una verdadera potencia en el mundo de los juegos. Diseñada para los jugadores más exigentes, esta placa ofrece un rendimiento gráfico excepcional. Con su arquitectura de última generación, experimentarás gráficos suaves y realistas en tus juegos favoritos. La tecnología TUF Gaming garantiza durabilidad y eficiencia, lo que significa que esta placa de video está construida para durar. "
+    }, 
+    {
+        "id": 5,
+        "title": "Memoria Team DDR4 8GB 3600MHz T-Force Delta White CL18",
+        "price": 26000,
+        "category": "Ram",
+        "img": "/ram1.png",
+        "stock": "26",
+        "description": "La Memoria Team DDR4 8GB 3600MHz T-Force Delta White CL18 es la elección perfecta para llevar tu rendimiento a un nuevo nivel. Con una capacidad de 8GB y una velocidad de 3600MHz, esta memoria ofrece un rendimiento excepcional para tus aplicaciones y juegos favoritos. Su diseño elegante y moderno en blanco Delta White le da un toque de estilo a tu configuración. Además, con una latencia CAS de 18, garantiza una respuesta rápida y sin demoras. Experimenta la potencia y la velocidad en cada tarea con la Memoria Team DDR4 T-Force Delta White CL18."
+    }, 
+    {
+        "id": 6,
+        "title": "Memoria RAM V8 gamer 16GB",
+        "price": 48000,
+        "category": "Ram",
+        "img": "/ram2.png",
+        "stock": "22",
+        "description": "La Memoria RAM V8 Gamer de 16GB es la elección definitiva para jugadores y entusiastas de la informática. Con 16GB de capacidad, proporciona un rendimiento excepcional para juegos y aplicaciones intensivas. Eleva tu experiencia de juego y multitarea a un nuevo nivel con esta memoria de alto rendimiento."
+    }
+  ]
+  
+    
