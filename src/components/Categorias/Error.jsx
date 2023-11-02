@@ -1,12 +1,10 @@
-
 const Error = () => {
-    return(
-        <div>
-            <h2>ERROR 404</h2>
-            {console.error("ERROR EN EL URL")}
-        </div>
-    )
-}
+  return (
+    <div>
+      <h2>ERROR 404</h2>
+      {console.error("ERROR EN EL URL")}
+    </div>
+  );
+};
 
-
-export default Error
+export default Error;
