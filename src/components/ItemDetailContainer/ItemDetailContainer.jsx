@@ -1,32 +1,31 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Products from "../ProductosJson/Productos.json";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import Loading from "../Loading/Loading";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
 
-const ItemDetailContainer = () => {
+function ItemDetailContainer() {
   const [item, setItem] = useState({});
+  const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const Data = Products.find((item) => item.id === parseInt(id));
-        setTimeout(() => {
-          setItem(Data);
-        }, 500);
-      } catch (error) {
-        console.log("error", error);
-      }
-    };
-    fetchData();
+    setLoading(true);
+    const queryDb = getFirestore();
+    const queryDoc = doc(queryDb, 'products', id);
+
+    getDoc(queryDoc)
+      .then((r) => setItem({ id: r.id, ...r.data() }))
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setLoading(false); 
+      });
   }, [id]);
 
-  return (
-    <div>
-      {/* Renderiza el componente ItemDetail solo si 'item' contiene datos válidos, de lo contrario, no se renderiza nada. */}
-      {item ? <ItemDetail item={item} /> : null}
-    </div>
-  );
-};
+  if (loading) return <Loading />;
+  return <ItemDetail item={item} />;
+}
 
 export default ItemDetailContainer;

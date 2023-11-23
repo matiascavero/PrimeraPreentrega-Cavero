@@ -1,8 +1,11 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
 import PropTypes from "prop-types";
+import useCartContext from "../../hook/useCartContext";
 
-const ItemCount = ({ stock }) => {
+// eslint-disable-next-line react/prop-types
+const ItemCount = ({ stock, item}) => {
+  const { addToCart} = useCartContext()
   const [cantidad, setCantidad] = useState(0);
 
   const incrementar = () => {
@@ -18,7 +21,9 @@ const ItemCount = ({ stock }) => {
   };
 
   const restablecer = () => {
+    const cantidadActual = cantidad;
     setCantidad(0);
+    addToCart(item, cantidadActual);
     Swal.fire({
       position: "top-end",
       icon: "success",

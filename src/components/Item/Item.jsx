@@ -22,6 +22,7 @@ const Item = ({ item }) => {
     </div>
   );
 };
+
 Item.propTypes = {
   item: PropTypes.object.isRequired,
 };
