@@ -31,7 +31,6 @@ const ItemCount = ({ stock, item}) => {
       showConfirmButton: false,
       timer: 1500,
     });
-    console.log(`Se agregaron ${cantidad} de productos al carrito`);
   };
 
   return (

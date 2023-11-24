@@ -9,21 +9,19 @@ function CartContextProvider({children}){
     
     const addToCart = (product, count) =>{
         if (product && product.id) {
-            // Verificar si el producto ya está en el carrito
+            // verificar si el producto ya está en el carrito
             const existingProductIndex = cart.findIndex((item) => item.id === product.id);
         
             if (existingProductIndex !== -1) {
-              // Si el producto ya está en el carrito, actualizar la cantidad
+              // si el producto ya está en el carrito, actualizar la cantidad
               const newCart = [...cart];
               newCart[existingProductIndex].qty += count;
               setCart(newCart);
             } else {
-              // Si el producto no está en el carrito, agregarlo como una nueva entrada
+              // si el producto no está en el carrito, agregarlo como una nueva entrada
               setCart([...cart, { ...product, qty: count, id: product.id }]);
             }
-          } else {
-            console.error('Product or product.id is undefined:', product);
-          }
+          } 
     }
 
     const qtyCart = () => {
@@ -48,7 +46,7 @@ function CartContextProvider({children}){
     if (newCart[index].qty > 1) {
         newCart[index].qty--;
     } else {
-        // Si la cantidad es 0 o 1, elimina el elemento del carrito
+        // si la cantidad es 0 o 1, elimina el elemento del carrito
         newCart.splice(index, 1);
     }
 
@@ -57,9 +55,9 @@ function CartContextProvider({children}){
    }
 
     return(
-    <Provider value={{cart, addToCart, qtyCart, removeTCart, incrementCart, decrementCart}}>
-        {children}
-    </Provider>
+      <Provider value={{cart, addToCart, qtyCart, removeTCart, incrementCart, decrementCart}}>
+          {children}
+      </Provider>
     )
 
     }

@@ -16,32 +16,25 @@ const NavBar = () => {
                 <li>
                     <Link to={'/'}>Inicio</Link>            
                 </li>
-
                 <li>
                    <Link to={'/category/PlacDVideo'}>
-                    {/* hice esto para que en el navbar se vea todo en la misma linea,
-                    porque sino aparecia 'Placa' y abajo 'de video' */}
-                    <div className="LinkText">
+                      {/* hice esto para que en el navbar se vea todo en la misma linea,
+                      porque sino aparecia 'Placa' y abajo 'de video' */}
+                      <div className="LinkText">
                         <span>Placas</span>
                         <span>de</span>
                         <span>video</span>
-                    </div>
+                      </div>
                    </Link>
                 </li>
-
                 <li>
-                <Link to={'/category/Monitor'}>Monitores</Link>
+                   <Link to={'/category/Monitor'}>Monitores</Link>
                 </li>
-
                 <li>
-                    <Link to={'/category/Ram'}>Rams</Link>
+                   <Link to={'/category/Ram'}>Rams</Link>
                 </li>
             </ul>
-            
-    
-                <CartWidget/>
-            
-            
+            <CartWidget/>    
         </div>
     </nav>
     </div>

@@ -13,9 +13,8 @@ const ItemDetail = ({ item }) => {
       </div>
       <div>
         <div className="title">
-        <h3 >{item.title}</h3>
+          <h3 >{item.title}</h3>
         </div>
-      
         <ul className="list">
           <li>{item.description}</li>
           <li>${item.price}</li>

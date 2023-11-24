@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react"
 import "./chekin.css"
 import useCartContext from "../../hook/useCartContext";
@@ -8,18 +9,26 @@ const Chekin = () =>{
   const [user, setUser] = useState({});
   const [orderNumber, setOrderNumber] = useState(null);
   const { cart } = useCartContext()
+  const formRef = React.createRef(); 
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleInput = ({target}) =>{
     setUser(currentValue =>{
       currentValue[target.name] = target.value
       return currentValue
     })
-    console.log(user)
   }
 
   const handleSubmit = async (event) =>{
     event.preventDefault()
-    console.log(user)
+    if (!user.email || !user.username || !user.tel) {
+      Swal.fire({
+        title: "Todos los campos son obligatorios",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
+      return;
+    }
     const buy = (cart, user)
     const order = await createOrder(buy);
     setOrderNumber(order);
@@ -28,15 +37,18 @@ const Chekin = () =>{
       width: 600,
       padding: "3em",
       color: "#716add",
-      background: "#fff url(/images/trees.png)",
       backdrop: `
         rgba(0,0,123,0.4)
       `
     });
+    //resetear form
+    formRef.current.reset();
+    setUser({});
+    setFormSubmitted(true);
   }
 return(
     <div>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form" ref={formRef} onSubmit={handleSubmit}>
         <label> EMAIL: </label>
         <br />
         <input type="email" name="email" placeholder="pepito10@gmail.com" value={user.email} onChange={handleInput} />
@@ -52,7 +64,8 @@ return(
         <button type="submit" className="buttonConfirm" onSubmit={handleSubmit}>Confirmar compra</button>
       </form>
       {/* Mostrar el número de orden si está disponible */}
-      {orderNumber && (
+      {formSubmitted && orderNumber && (
+        // Mostrar el número de orden si está disponible
         <div className="orderNumber">
           <p>Número de orden: {orderNumber}</p>
         </div>

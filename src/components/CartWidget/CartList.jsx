@@ -18,11 +18,11 @@ const CartList = () =>{
     }
    
     
-  const calculateTotal = () => {
-    // Usar reduce para sumar los precios de todos los productos en el carrito
-    const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
-    return total.toFixed(0); // Ajustar a dos decimales si es necesario
-  };
+    const calculateTotal = () => {
+     // Use reduce para sumar los precios de todos los productos en el carrito
+      const total = cart.reduce((acc, item) => acc + item.price * item.qty, 0);
+      return total.toFixed(0); 
+    };
     return(
       <div>
            <div className="titleDetail">
@@ -50,6 +50,7 @@ const CartList = () =>{
               <CartItem key={item.id} item={item} handleDelete={handleDelete} handleIncrement={onIncrementCart} handleDecrement={onDecrementCart} />
                ))
                ) : (
+                //de lo contrario mensaje de que el carrito esta vacio y redireccion a home.
                  <tr>
                   <th colSpan="5" className="cartVacio">El carrito está vacío <br /> <Link to="/" className="Link" >Hacer compras</Link></th>
                  </tr>

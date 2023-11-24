@@ -21,17 +21,16 @@ const ItemListContainer = ({ greeting }) => {
         queryFilter = query(queryCollect, where('categoryId', '==', id));
       }
     
-      const fetchData = async () => {
-        try {
-          const result = id ? await getDocs(queryFilter) : await getDocs(queryCollect);
-          setItem(result.docs.map((p) => ({ id: p.id, ...p.data() })));
-        } catch (error) {
-          console.error("ERROR", error);
-        } finally {
-          setLoading(false);
+    const fetchData = async () => {
+      try {
+        const result = id ? await getDocs(queryFilter) : await getDocs(queryCollect);
+        setItem(result.docs.map((p) => ({ id: p.id, ...p.data() })));
+      }catch (error) {
+        console.error("ERROR", error);
+      }finally {
+        setLoading(false);
         }
       };
-    
       setTimeout(() => {
         fetchData();
       }, 1500);

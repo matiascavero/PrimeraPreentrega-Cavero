@@ -12,21 +12,19 @@ import Chekin from './components/Chekin/Chekin'
 function App() {
   return (
     <div>
-
     <BrowserRouter>
      <CartContextProvider>
-      <NavBar/>
-      <Routes>
-        <Route path='/' element={<ItemListContainer greeting='Bienvenidos a todo software'/>}/>
-        <Route path='/cart' element={<CartList />} />
-        <Route path='/category/:id' element={<ItemListContainer/>}/>
-        <Route path='/item/:id' element={<ItemDetailContainer/>}/>
-        <Route path='/chekin' element={<Chekin/>}/>
-        <Route path='*' element={<Error/>}/>
-      </Routes>
+       <NavBar/>
+       <Routes>
+          <Route path='/' element={<ItemListContainer greeting='Bienvenidos a todo software'/>}/>
+          <Route path='/cart' element={<CartList />} />
+          <Route path='/category/:id' element={<ItemListContainer/>}/>
+          <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+          <Route path='/chekin' element={<Chekin/>}/>
+          <Route path='*' element={<Error/>}/>
+       </Routes>
      </CartContextProvider>
     </BrowserRouter>
-
     </div>
   )
 }
